@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Savings Account Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    .savings-details-container {
+      width: 300px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .savings-details-container h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .savings-details-container form div {
+      margin-bottom: 15px;
+    }
+    .savings-details-container label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .savings-details-container .readonly-field {
+      width: calc(100% - 12px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+      background-color: #f4f4f4;
+      color: #333;
+      pointer-events: none;
+    }
+    .savings-details-container button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .savings-details-container button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+<div class="savings-details-container">
+  <h2>Savings Account Details</h2>
+  <form action="/savings_account" method="post">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" class="readonly-field" value="John Doe" readonly>
+    </div>
+    <div>
+      <label for="userid">User ID:</label>
+      <input type="text" id="userid" name="userid" class="readonly-field" value="123456" readonly>
+    </div>
+    <div>
+      <label for="closing-balance">Closing Balance:</label>
+      <input type="text" id="closing-balance" name="closing-balance" class="readonly-field" value="$5000" readonly>
+    </div>
+    <button type="submit">View Details</button>
+  </form>
+</div>
+</body>
+</html>
